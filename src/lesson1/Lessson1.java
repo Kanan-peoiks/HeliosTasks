@@ -1,7 +1,7 @@
 package lesson1;
 
 import java.util.Scanner;
-public class Lesson1 {
+public class Lessson1 {
     public static void main(String[] args) {
 // data_type variable = value
 

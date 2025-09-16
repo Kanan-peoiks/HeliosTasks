@@ -1,8 +1,6 @@
 package ferdi;
 
-import java.util.Scanner;
-
-public class ferdi {
+public class Ferdiishler {
     public static void main (String[] args){
         int yas = 10;
 

@@ -1,8 +1,8 @@
-package homework;
+package lesson1.homework;
 
 import java.util.Scanner;
 
-public class task2 {
+public class Task2 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Zehmet olmasa banan siresinin ve kaktus siresinin miqdarini yazin (ml ile): ");
