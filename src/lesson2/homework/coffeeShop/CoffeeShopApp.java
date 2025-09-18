@@ -8,7 +8,7 @@ public class CoffeeShopApp {
         System.out.println("Yaşınızı daxil edin: ");
         int age = sc.nextInt();
         sc.nextLine(); //QAYDA OLARAQ BELEDI
-        double odenis = 0;
+        double odenis; //double odenis = 0;
         System.out.println("Menyu: Latte, Mokaçino, Kapuçino, Espresso, Amerikano ");
         String secim = sc.nextLine();
         secim = secim.trim().toLowerCase();
@@ -35,7 +35,7 @@ public class CoffeeShopApp {
                 break;
             default:
                 System.out.println("Yanlış seçim");
-                break;
+                return; //odenisi hesablamasın deye
         }
         if ( age < 12) {
             System.out.println("Icki pulsuzdur. ;)");
