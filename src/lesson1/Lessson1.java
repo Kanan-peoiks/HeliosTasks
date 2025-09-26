@@ -16,4 +16,5 @@ scanner.nextLine(); //YAZILMASA AD HİSSƏSİNƏ KEÇMİR
 
     }
 
+
 }
