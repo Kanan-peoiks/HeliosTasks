@@ -13,13 +13,15 @@ public class StudentManagementSystem {
         int telebesayi = scan.nextInt(); // telebe sayini tapiram ki, siyahida ve ballari oyrenmek ucun qeyd edim
 
         int [] grade = new int[telebesayi]; //bal ucun
-        int ortalama = 0;
+        int ortalama = 0; //bal ucun ortalama
         char letterGrade; //bali herfe cevirmek ucun
 
         int kecenTelebe = 0;
         int qalanTelebe = 0;
 
         int [] yash = new int[telebesayi];
+        int ortalama2 = 0; //yas ucun ortalama
+
 
         scan.nextLine(); // QAYDA UZRE EGER STRING OLMASA SILECEM
 
@@ -38,6 +40,7 @@ public class StudentManagementSystem {
         for (int j = 0; j < siyahi.length; j++) { //telebelerinYasiniElaveEdecem
             System.out.println("Zehmet olmasa yasinizi daxil edin. Telebe: "+siyahi[j]);
             yash[j]= scan.nextInt();
+            ortalama2 +=yash[j];
             scan.nextLine();
         }
     do {
@@ -91,6 +94,11 @@ public class StudentManagementSystem {
                             System.out.println("Keçən telebeler "+kecenTelebe+". Qalan telebeler: "+qalanTelebe);
                             break;
                         case 4:
+                            ortalama2 = ortalama2 / telebesayi;
+                            System.out.println("Orta yas: "+ortalama2);
+                            break;
+                        default:
+                            System.out.println("Bele bir secimininiz yoxdur. ");
                     }
                     break;
                 case 0:
