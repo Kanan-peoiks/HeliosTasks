@@ -13,14 +13,14 @@ public class StudentManagementSystem {
         int telebesayi = scan.nextInt(); // telebe sayini tapiram ki, siyahida ve ballari oyrenmek ucun qeyd edim
 
         int [] grade = new int[telebesayi]; //bal ucun
-        int ortalama = 0; //bal ucun ortalama
+        double ortalama = 0; //bal ucun ortalama
         char letterGrade; //bali herfe cevirmek ucun
 
         int kecenTelebe = 0;
         int qalanTelebe = 0;
 
         int [] yash = new int[telebesayi];
-        int ortalama2 = 0; //yas ucun ortalama
+        double ortalama2 = 0; //yas ucun ortalama
 
 
         scan.nextLine(); // QAYDA UZRE EGER STRING OLMASA SILECEM
