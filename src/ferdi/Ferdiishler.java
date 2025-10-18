@@ -1,9 +1,21 @@
 package ferdi;
 
+import java.util.Scanner;
+
 public class Ferdiishler {
     public static void main (String[] args){
-        int yas = 19;
-     boolean result = (yas > 18) ? true: false;
-        System.out.println(result);
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        while (s.contains("()") || s.contains("{}") || s.contains("[]")) {
+            s = s.replace("()", "");
+            s = s.replace("{}", "");
+            s = s.replace("[]", "");
+        }
+
+        if (s.isEmpty()) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
     }
 }
