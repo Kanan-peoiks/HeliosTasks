@@ -5,28 +5,16 @@ import java.util.Scanner;
 public class Ferdiishler {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int t = scan.nextInt();
-        scan.nextLine(); // nextInt-dən sonra qalan newline-i udmaq
+        int n = scan.nextInt();
+        scan.nextLine();
+        int [] numbers = new int[n];
 
-        for (int j = 0; j < t; j++) {
-            String line = scan.nextLine();
-            String[] words = line.split(" "); // hər sözü ayrı-ayrı götür
-            StringBuilder result = new StringBuilder();
+        for (int i = 0; i < n; i++) {
+            int t = scan.nextInt();
+            numbers[i]=t;}
 
-            for (String word : words) {
-                String even = "";
-                String odd = "";
-                for (int i = 0; i < word.length(); i++) {
-                    if (i % 2 == 0) {
-                        even += word.charAt(i);
-                    } else {
-                        odd += word.charAt(i);
-                    }
-                }
-                result.append(even).append(" ").append(odd).append(" ");
-            }
-
-            System.out.println(result.toString().trim()); // sonda əlavə boşluq silinir
+        for (int i=numbers.length-1;i>=0;i--){
+            System.out.printf(numbers[i]+" ");
         }
 
         scan.close();
