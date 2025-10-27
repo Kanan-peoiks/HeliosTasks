@@ -15,11 +15,11 @@ public class ArrayListTask3 {
         String axtaris = scan.nextLine();
 
         for (int i = 0; i < kitablar.size(); i++) {
-            if (kitablar.get(i).length() == axtaris.length()){
-
+            if (kitablar.contains(axtaris)){
+                System.out.println("Kitab tapıldı");
             }
             else {
-
+                System.out.println("Kitab mövcud deyil");
             }
         }
 
