@@ -14,6 +14,11 @@ public class ArrayListTask1 {
 
         for (int i = 0; i < futbolcular.size(); i++) {
             System.out.println((i+1)+". " +"Futbolcu: "+futbolcular.get(i));
+            System.out.println("------------------------------------");
+        }
+        futbolcular.remove(2);
+        for (int i = 0; i < futbolcular.size(); i++) {
+            System.out.println((i+1)+". " +"Futbolcu: "+futbolcular.get(i));
         }
     }
 }
