@@ -13,10 +13,12 @@ public class ArrayListTask4 {
         for (int i = 0; i < dumble.size(); i++) {
             System.out.println(dumble.get(i));
                     }
-        System.out.println("___________________________");
+        System.out.println("_____________________________________");
+
         for (int i = 0; i < dumble.size(); i++) {
             if (dumble.get(i) >=5 ){
-                System.out.println(dumble.get(i));
+
+                System.out.println("ceki: " + dumble.get(i));
             }
         }
 
