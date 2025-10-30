@@ -14,7 +14,7 @@ public class ArrayListTask4 {
             System.out.println(dumble.get(i));
                     }
         System.out.println("_____________________________________");
-
+        System.out.println(dumble);
         for (int i = 0; i < dumble.size(); i++) {
             if (dumble.get(i) >=5 ){
 
