@@ -7,7 +7,7 @@ public class Ferdiishler {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
-        String binary = Integer.toBinaryString(n);
+        String binary = Integer.toBinaryString(n); //binary-a cevirir
         int max_count = 0;
         String [] arr = binary.split("0");
 
