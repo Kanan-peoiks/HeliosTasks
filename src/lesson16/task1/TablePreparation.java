@@ -1,4 +1,4 @@
-package lesson16;
+package lesson16.task1;
 
 public class TablePreparation extends Thread{
 
