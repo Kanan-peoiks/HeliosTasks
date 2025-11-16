@@ -1,4 +1,4 @@
-package lesson16.task2;
+package lesson16.classtask.task2;
 
 public class People extends Thread{
  private final String name;

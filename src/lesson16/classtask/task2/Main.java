@@ -1,6 +1,4 @@
-package lesson16.task2;
-
-import lesson8.task1.Trainable;
+package lesson16.classtask.task2;
 
 public class Main {
     public static void main(String[] args) {
