@@ -1,4 +1,4 @@
-package lesson18.classtask;
+package lesson18.classtask.stringBuilder;
 
 public class Task1 {
     public static void main(String[] args) {
