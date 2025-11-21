@@ -1,10 +1,10 @@
 package lesson17.classtask.task1;
 
-class car implements Runnable{
+class Car implements Runnable{
     private Parking parking;
     private String name;
 
-    public car(Parking parking, String name) {
+    public Car(Parking parking, String name) {
         this.parking = parking;
         this.name = name;
     }
