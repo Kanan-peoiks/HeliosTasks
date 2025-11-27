@@ -10,6 +10,7 @@ public class BankAccount {
     public Double getAccountBalans() {
         return accountBalans;
     }
+
     public void performTransaction (TransactionType type, String amountStr){
             double amount  = Double.parseDouble(amountStr);
 
