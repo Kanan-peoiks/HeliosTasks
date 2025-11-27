@@ -11,28 +11,28 @@ import java.util.Stack;
 public class Ferdiishler {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-    int q = scan.nextInt();
+    int n = scan.nextInt();
+        scan.nextLine();
+        for (int i = 0; i < n; i++) {
+            String s = scan.nextLine();
+            long num = Long.parseLong(s);
 
-        for (int i = 0; i < q; i++) {
-
-            int a = scan.nextInt();
-            int b = scan.nextInt();
-            int n = scan.nextInt();
-            int res = a;
-
-
-            for (int j = 1; j <= n; j++) {
-                res = res + b;
-                b = b * 2;
-                System.out.printf(res+" ");
-            }
-            System.out.println();
+        if (num >= -128 && num <= 127) {
+            System.out.println("* byte");
         }
-// 5+1*3 b=3 5+2*3 b6 5+3*6 b18 5+4*18 b72 5+5*72           8,11,21,77,365 -> 8/14/26/50/98
+        if (num >= -32768 && num <= 32767) {
+            System.out.println("* short");
+        }
+        if (num >= -2147483648L && num <= 2147483647L) {
+            System.out.println("* int");
+        }
+        if (num >= Long.MIN_VALUE && num <= Long.MAX_VALUE) {
+            System.out.println("* long");
+        }
 
 
 
-
+        }
 
 
     }
