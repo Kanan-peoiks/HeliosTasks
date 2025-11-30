@@ -1,10 +1,9 @@
-package lesson19.classtask.task1;
+package lesson19.classtask;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class Task1 {
     public static void main(String[] args) {
 //        List<Double> list = new ArrayList<>();
 //    list.add(30.);
