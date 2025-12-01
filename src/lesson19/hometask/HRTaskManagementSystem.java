@@ -14,7 +14,7 @@ public class HRTaskManagementSystem {
         boolean davam = true;
         TaskStatus status =null;
         UrgencyLevel level = null;
-        Boolean isCritic = true;
+
         while (davam){
             System.out.println("--- Əsas Menyu ---\n" +
                     "1. Yeni tapşırıq əlavə et\n" +
@@ -54,7 +54,7 @@ public class HRTaskManagementSystem {
                         System.out.println("Urgency düzgün seçilməyib.");}
 
                     System.out.println("Kritikdir? true/false");
-                    isCritic = scan.nextBoolean();
+                    Boolean isCritic = scan.nextBoolean();
 
                 Task task = new Task(taskId,estimatedHourss,status,level, isCritic);
                 taskList.add(task);
@@ -153,7 +153,7 @@ public class HRTaskManagementSystem {
                     System.out.println("5. Kritik tapşırıqların ümumi saatını hesablasın: ");
                     Double count = 0.0;
                     for (Task t :taskList){
-                        if(isCritic == true){
+                        if(t.getCritical() == true){
                             count += t.getEstimatedHours();}
                     }
                     System.out.println(count);
