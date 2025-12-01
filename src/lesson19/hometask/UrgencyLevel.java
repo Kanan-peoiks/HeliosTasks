@@ -15,15 +15,5 @@ public enum UrgencyLevel {
         return desc;
     }
 
-    public static void getTesvir(UrgencyLevel level){
-        switch (level){
-            case ROUTINE, NORMAL, URGENT:
-                System.out.println(level + ": "+level.getDesc());
-                break;
-            default:
-                System.out.println("Bele secim yoxdur.");
-                break;
-        }
 
-    }
 }

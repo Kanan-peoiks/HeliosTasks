@@ -81,7 +81,7 @@ public class HRTaskManagementSystem {
                             t.updateStatus(newStatus);
                             switch (newStatus){
                                 case PENDING, IN_PROGRESS, ON_HOLD, COMPLETED, ARCHIVED:
-                                    System.out.println("Tapşırıq gözləməyə alındı.");
+                                    System.out.println("Tapşırıq dəyişdi.");
                                     break;
                                 default: //ehtiyac yoxdur amma yazmaq yaxsidir
                                     System.out.println("Bele secim yoxdur. ");
@@ -100,7 +100,7 @@ public class HRTaskManagementSystem {
                     scan.nextLine();
                     for (Task t :taskList){
                         if(t.getTaskId().equals(newTaskIdForCritical)){
-                            isCritic = true;
+                            t.isCritical = true;
                             System.out.println("Tapşırıq kritik olaraq qeyd edildi.");
                         }
                     }
@@ -143,9 +143,10 @@ public class HRTaskManagementSystem {
                             default:
                                 System.out.println("Yanlış seçim. ");
                         }
-                        if (!found){
-                            System.out.println("Uyğun tapşırıq tapılmadı. ");
-                        }
+
+                    }
+                    if (!found){
+                        System.out.println("Uyğun tapşırıq tapılmadı. ");
                     }
                     break;
                 case 5:

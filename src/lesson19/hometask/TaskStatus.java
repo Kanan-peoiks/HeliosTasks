@@ -17,15 +17,5 @@ public enum TaskStatus {
         return description;
     }
 
-    public static void getTesvir(TaskStatus status){
-        switch (status){
-            case PENDING, IN_PROGRESS, ON_HOLD, COMPLETED, ARCHIVED:
-                System.out.println(status + ": "+status.getDescription());
-                break;
-            default:
-                System.out.println("Bele secim yoxdur.");
-                break;
-        }
 
-    }
 }
