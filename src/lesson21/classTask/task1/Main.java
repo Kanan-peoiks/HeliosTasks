@@ -1,6 +1,4 @@
-package lesson21.task1;
-
-import lesson7.task2.Product;
+package lesson21.classTask.task1;
 
 import java.util.ArrayList;
 import java.util.List;
