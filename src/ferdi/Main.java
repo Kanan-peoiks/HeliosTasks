@@ -1,37 +1,35 @@
 package ferdi;
 
+import java.sql.Array;
 import java.util.LinkedList;
 import java.util.Scanner;
 
 
-interface AdvancedArithmetic {
-    int divisorSum(int n);
-    //İnterface məntiqi budur ki, bu yuxarıda yazdığımız metodu mütləq çağırmalısan deyir
-}
-
-class Calculator implements AdvancedArithmetic {
-    public int divisorSum(int n) {
-        int sum = 0;
-        for (int i = 1; i <= n; i++) {
-            if (n % i == 0) {
-                sum += i;
-            }
-        }
-        return sum;
-    }
-}
-
-
 public class Main {
     public static void main(String[] args){
-    Calculator cal = new Calculator();
     Scanner scan= new Scanner(System.in);
     int n = scan.nextInt();
-    int result = cal.divisorSum(n);
-        System.out.println("I implemented: AdvancedArithmetic");
-        System.out.println(result);
-    scan.close();
+    int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+        arr[i]= scan.nextInt();
+        }
+        int swapCount = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n-1; j++) {
+                if (arr[j]>arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1]= temp;
+                    swapCount++;
+                }
+            }
+        }
 
+        System.out.println("Array is sorted in "+swapCount+" swaps.");
+        System.out.println("First Element: "+arr[0]);
+        System.out.println("Last Element: "+arr[n-1]);
+
+    scan.close();
     }
 }
 
