@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 interface AdvancedArithmetic {
     int divisorSum(int n);
+    //İnterface məntiqi budur ki, bu yuxarıda yazdığımız metodu mütləq çağırmalısan deyir
 }
 
 class Calculator implements AdvancedArithmetic {
