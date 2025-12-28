@@ -3,37 +3,33 @@ package ferdi;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-class Calculator {
-    int power(int n, int p) throws Exception {
-        if (n < 0 || p < 0) {
-            throw new Exception("n and p should be non-negative");
+
+interface AdvancedArithmetic {
+    int divisorSum(int n);
+}
+
+class Calculator implements AdvancedArithmetic {
+    public int divisorSum(int n) {
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                sum += i;
+            }
         }
-        int result = 1;
-        for (int i = 0; i < p; i++) {
-            result *= n;
-        }
-        return result;
+        return sum;
     }
 }
 
+
 public class Main {
-    public static void main(String[] args) throws Exception {
-        Calculator cal = new Calculator();
-        Scanner scan = new Scanner(System.in);
-        int z = scan.nextInt();
-        String[] results = new String[z];
-        for (int i = 0; i < z; i++) {
-            int n = scan.nextInt();
-            int p = scan.nextInt();
-            try {
-                results[i] = String.valueOf(cal.power(n, p));
-            } catch (Exception e) {
-                results[i] = e.getMessage();
-            }
-        }
-        for (String r : results){
-            System.out.println(r);
-        }
+    public static void main(String[] args){
+    Calculator cal = new Calculator();
+    Scanner scan= new Scanner(System.in);
+    int n = scan.nextInt();
+    int result = cal.divisorSum(n);
+        System.out.println("I implemented: AdvancedArithmetic");
+        System.out.println(result);
+    scan.close();
 
     }
 }
