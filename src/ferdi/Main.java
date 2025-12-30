@@ -7,23 +7,30 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
-
-        LinkedList<Integer> list = new LinkedList<>();
+        String[] arr = new String[n];
         for (int i = 0; i < n; i++) {
-            int add = scan.nextInt();
-
-            if (list.isEmpty()) {
-                list.add(add);
+            int k = scan.nextInt();
+            if (k <= 1) {
+                arr[i] = "Not prime";
             } else {
-                int sonuncu = list.getLast();
-                if (sonuncu != add) {
-                    list.add(add);
+                boolean isPrime = true;
+                for (int j = 2; j * j <= k; j++) {
+                    if (k % j == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) {
+                    arr[i] = "Prime";
+                } else {
+                    arr[i] = "Not prime";
                 }
             }
+
         }
 
-        for (Integer list1 : list){
-            System.out.print(list1+" ");
+        for (String arr1 : arr){
+            System.out.println(arr1);
         }
 
 
