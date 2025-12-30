@@ -1,35 +1,72 @@
 package ferdi;
 
+
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
 
-    public static <T> void printArray(T [] array){
-        for(T element: array){
-            System.out.println(element);
+
+
+public class Main {
+    static class Node {
+        int data;
+        Node left, right;
+        Node(int data) {
+            this.data = data;
+            left = right = null;
         }
     }
+    static int height(Node root) {
+        if (root == null) return -1;
+        return 1 + Math.max(height(root.left), height(root.right));
+    }
+
 
     public static void main(String[] args) {
-
         Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();
+        int n =scan.nextInt();
         scan.nextLine();
-        Integer[] intArray = new Integer[n];
+        int[] arr = new int[n];
+        int left = 0;
+        int right = arr.length-1;
+
         for (int i = 0; i < n; i++) {
-            intArray[i] = scan.nextInt();
+            arr[i]= scan.nextInt();
         }
-        int m = scan.nextInt();
-        scan.nextLine();
-        String[] stringArray = new String[m]; // m = element sayı
-        for (int i = 0; i < m; i++) {
-            stringArray[i] = scan.nextLine();
+
+
+        Node root = null;
+        for (int i = 0; i < n; i++) {
+            int data = arr[i];
+            if (root == null) {
+                root = new Node(data);
+                continue;
+            }
+
+            Node current = root;
+            while (true) {
+                if (data <= current.data) {
+                    if (current.left == null) {
+                        current.left = new Node(data);
+                        break;
+                    } else {
+                        current = current.left;
+                    }
+                } else {
+                    if (current.right == null) {
+                        current.right = new Node(data);
+                        break;
+                    } else {
+                        current = current.right;
+                    }
+                }
+            }
         }
-        printArray(intArray);
-        printArray(stringArray);
-scan.close();
+
+    System.out.println(height(root));
 
     }
 }
