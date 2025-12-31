@@ -12,6 +12,9 @@ public class Main {
         for (int i = 0; i < n; i++) {
             arr[i] = scanner.nextInt();
         }
+        for (int arr1: arr){
+            System.out.println(arr1);
+        }
 
         scanner.close();
     }
